@@ -4,10 +4,10 @@ jobs:
   delete-old-releases:
     runs-on: ubuntu-latest
     steps:
-      - uses: dev-drprasad/delete-older-releases@v0.2.0
+      - uses: tinoji/delete-older-release-assets@v1.0.0
         with:
           # repo: <owner>/<repoName> # defaults to current repo
-          keep_latest: 2
+          keep_latest: 1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
