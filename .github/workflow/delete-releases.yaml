@@ -1,0 +1,13 @@
+name: demo
+on: [workflow_dispatch]
+jobs:
+  delete-old-releases:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: dev-drprasad/delete-older-releases@v0.2.0
+        with:
+          # repo: <owner>/<repoName> # defaults to current repo
+          keep_latest: 2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
